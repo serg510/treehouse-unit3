@@ -13,11 +13,6 @@
 //     .slideUp();
 // });
 
-// $('#flashMessage')
-//     .hide()
-//     .slideDown(1000)
-//     .delay(3000)
-//     .slideUp();
 
 
 // const title = 'My first Blog Post';
