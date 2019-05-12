@@ -26,7 +26,7 @@ const $button = $("<button>Reveal Spoiler</button>");
 //Append to web page
 $(".spoiler").append($button);
 
-// //event delegation 
+// //event delegation =
 // $(".spoiler button").on('click',function(){
   
 //   //show the spoiler text
