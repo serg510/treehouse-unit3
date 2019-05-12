@@ -101,3 +101,7 @@ button {
   margin-left: 100px;
   min-height: 400px;
 }
+#flashMessage{
+  display:none;
+
+}
