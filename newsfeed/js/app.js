@@ -63,3 +63,18 @@
     //else allow the download
 
  })
+//print the href links on the page 
+
+//  $('a').each(function(index,link){
+//     const url = $(link).attr('href');
+//     $(link).parent().append(`(${url})`);
+//   //console.log(index,$(element).attr('href'))
+//  });
+
+/// same function using "this" keyword
+
+$('a').each(function(){
+  const url = $(this).attr('href');
+  $(this).parent().append(`(${url})`);
+//console.log(index,$(element).attr('href'))
+});
