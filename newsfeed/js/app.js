@@ -28,4 +28,38 @@
 // });
 
 
- 
+ const $odd = $('a:odd');
+ //selector that "starts with"
+ const $secureLinks = $('a[href^="https://"]');
+ //selector that "ends with"
+ const $pdfs = $('a[href$=".pdf"]');
+ //create the checkbox
+ const $pdfCheckbox = $('<label><input type="checkbox"> Allow PDF downloads</label>');
+ //append the newly created checkbox to the links 
+ $('#links').append($pdfCheckbox);
+//setting  a links  to open on a new page 
+ $secureLinks.attr('target', '_black');
+ //setting pdfs to download when clicked
+ $pdfs.attr('download',true);
+//change the css property 
+ //$odd.css('backgroundColor','lightgrey');
+
+// add a secure class to the a links
+ $secureLinks.addClass('secure')
+
+ // add a of pdf to pdf links
+ $pdfs.addClass('pdf');
+
+ $pdfs.on('click',function(e){
+    //check if checkbox has been checked
+
+    //if zero checkboxes are checked 
+    if ($(':checked').length === 0){
+    //prevent download of document
+    e.preventDefault();
+    //alert the user
+    alert('Please check the box to allow PDF downloads');
+  };
+    //else allow the download
+
+ })
